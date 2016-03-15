@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+
+    <title>sky-toolbar demo</title>
+
+    <script src="../../../../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../../../../bower_components/iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../../../../bower_components/iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../../../../../bower_components/iron-flex-layout/iron-flex-layout.html">
+    <link rel="import" href="../../../../../bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="../../../styles/default-theme.html">
+    <link rel="import" href="../../sky-icon-button/sky-icon-button.html">
+    <link rel="import" href="../../sky-progress/sky-progress.html">
+    <link rel="import" href="../sky-toolbar.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+      .centered {
+        min-width: calc(100% - 200px);
+      }
+
+      sky-toolbar sky-progress {
+        --progress-active-color: var(--accent-color);
+      }
+
+      .spacer {
+        @apply(--layout-flex);
+      }
+
+      .vertical-section {
+        margin: 0 0 40px;
+      }
+    </style>
+  </head>
+  <body unresolved>
+    <div class="vertical-section-container centered">
+      <h3>
+        A plain <code>sky-toolbar</code>. Use <code>class="title"</code> to
+        indicate the toolbar's title.
+      </h3>
+      <div class="vertical-section">
+        <sky-toolbar>
+          <span class="title">Title</span>
+        </sky-toolbar>
+      </div>
+
+      <h3>A styled <code>sky-toolbar</code>.</h3>
+      <div class="vertical-section">
+        <style is="custom-style">
+          sky-toolbar.red {
+            --toolbar-background: red;
+            --toolbar-title: {
+              font-style: italic;
+              font-weight: bold;
+            };
+          }
+        </style>
+
+        <sky-toolbar class="red">
+          <span class="title">Title</span>
+        </sky-toolbar>
+      </div>
+
+      <h3>
+        <code>sky-icon-button</code> is styled specially when used in a toolbar
+        before the title element or if the button has <code>icon="menu"</code>.
+      </h3>
+      <div class="vertical-section">
+        <sky-toolbar>
+          <sky-icon-button icon="menu"></sky-icon-button>
+          <span class="title">Title</span>
+          <sky-icon-button icon="refresh"></sky-icon-button>
+          <sky-icon-button icon="add">+</sky-icon-button>
+        </sky-toolbar>
+      </div>
+
+      <h3>
+        Use <code>class="tall"</code> to expand the toolbar to three sections.
+      </h3>
+      <div class="vertical-section">
+        <sky-toolbar class="tall">
+          <sky-icon-button icon="menu"></sky-icon-button>
+          <span class="title">Title</span>
+          <sky-icon-button icon="refresh"></sky-icon-button>
+          <sky-icon-button icon="add">+</sky-icon-button>
+        </sky-toolbar>
+      </div>
+
+      <h3>
+        Use <code>class="medium-tall"</code> to expand the toolbar to two
+        sections.
+      </h3>
+      <div class="vertical-section">
+        <sky-toolbar class="medium-tall">
+          <sky-icon-button icon="menu"></sky-icon-button>
+          <span class="title">Title</span>
+          <sky-icon-button icon="refresh"></sky-icon-button>
+          <sky-icon-button icon="add">+</sky-icon-button>
+        </sky-toolbar>
+      </div>
+
+      <h3>
+        Use <code>class="middle"</code> and <code>class="bottom"</code> to
+        indicate which section of the toolbar an element should be placed in.
+        Elements are placed in the top section by default.
+      </h3>
+      <div class="vertical-section">
+        <sky-toolbar class="tall">
+          <sky-icon-button icon="menu"></sky-icon-button>
+          <span class="title">Title</span>
+          <sky-icon-button icon="refresh"></sky-icon-button>
+          <sky-icon-button icon="add">+</sky-icon-button>
+
+          <span class="middle title">Middle Title</span>
+
+          <span class="bottom title">Bottom Title</span>
+          <sky-icon-button icon="content-cut" class="bottom"></sky-icon-button>
+          <sky-icon-button icon="content-copy" class="bottom"></sky-icon-button>
+          <sky-icon-button icon="content-paste" class="bottom"></sky-icon-button>
+        </sky-toolbar>
+      </div>
+
+      <h3>
+        Don't use both <code>class="middle"</code> and <code>class="bottom"</code>
+        elements in a <code>class="medium-tall"</code> toolbar.
+      </h3>
+      <div class="vertical-section">
+        <sky-toolbar class="medium-tall">
+          <sky-icon-button icon="menu"></sky-icon-button>
+          <span class="title">Top Title</span>
+          <sky-icon-button icon="refresh"></sky-icon-button>
+          <sky-icon-button icon="add">+</sky-icon-button>
+
+          <span class="middle title">Middle Title</span>
+
+          <span class="bottom title">Bottom Title</span>
+        </sky-toolbar>
+      </div>
+
+      <h3>
+        Elements with <code>class="fit"</code> expand to fit to the bottom of the
+        toolbar section they are in.
+      </h3>
+      <div class="vertical-section">
+        <sky-toolbar class="medium-tall">
+          <sky-icon-button icon="menu"></sky-icon-button>
+          <div class="spacer"></div>
+          <sky-icon-button icon="refresh"></sky-icon-button>
+          <sky-icon-button icon="add">+</sky-icon-button>
+          <div class="middle title">Title</div>
+          <sky-progress class="middle fit" value="60"></sky-progress>
+        </sky-toolbar>
+      </div>
+    </div>
+  </body>
+</html>
