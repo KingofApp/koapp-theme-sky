@@ -1,0 +1,64 @@
+{
+  "name": "Sky",
+  "identifier": "koapp-theme-sky",
+  "description": {
+    "en-US" : "",
+    "es-ES" : "Plantilla basada en las guías de diseño de Material Design"
+  },
+  "version": "1.0",
+  "author": "King of App",
+  "category": [
+    "material-design"
+  ],
+  "price": 0,
+  "platforms": [
+    "android",
+    "ios",
+    "windows"
+  ],
+  "showOn": {
+    "market": true
+  },
+  "images" : {
+    "list" : "images/list.png",
+    "screenshots" : [
+      "images/screenshot01.png",
+      "images/screenshot02.png"
+    ],
+    "popover" : "images/popover.png",
+    "banner" : "images/banner.png"
+  },
+  "defaultConfig": {
+    "colors": {
+      "primaryTextColor": "#424540",
+      "primaryBackgroundColor": "#ffffff",
+      "secondaryTextColor": "#7E8D9D",
+      "disabledTextColor": "#7E8D9D",
+      "dividerColor": "#e0e0e0",
+      "primaryColor": "#3ea1e6",
+      "lightPrimaryColor": "#c5cae9",
+      "darkPrimaryColor": "#7ec0ee",
+      "accentColor": "#ff4081",
+      "lightAccentColor": "#ff4081",
+      "darkAccentColor": "#ff4081",
+      "errorColor": "#dd2c00",
+      "backgroundColor": "#ffffff"
+    },
+    "images": {
+      "background": ""
+    },
+    "fonts": {
+      "primaryFontFamily": {
+        "name": "Arimo",
+        "url": "https://fonts.googleapis.com/css?family=Arimo"
+      },
+      "titleFontFamily": {
+        "name": "Arimo",
+        "url": "https://fonts.googleapis.com/css?family=Arimo"
+      }
+    },
+    "menu": "polymermenu"
+  },
+  "subscription": false,
+  "main": "themes/koapp-theme-sky/koapp-theme-sky.html"
+}
